@@ -1,0 +1,36 @@
+# pyTriEX
+
+A Python library for building compact regular expressions from lists of strings using Trie data structure.
+
+## Installation
+
+```bash
+pip install pyTriEX
+```
+
+## Usage
+
+```python
+from pyTriEX import build_regex_from_list
+
+# Build regex from a list of strings
+strings = ["cat", "car", "card", "care", "careful"]
+regex = build_regex_from_list(strings)
+print(regex)  # ^(?:ca(?:r(?:d|e(?:ful)?)|t))$
+
+# Use the regex
+import re
+pattern = re.compile(regex)
+print(pattern.match("car"))  # Match object
+print(pattern.match("dog"))  # None
+```
+
+## Features
+
+- Efficient Trie-based regex construction
+- Compact output patterns
+- Easy to use
+
+## License
+
+MIT License
