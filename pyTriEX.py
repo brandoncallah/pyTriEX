@@ -3,6 +3,8 @@ py-trex.py
 A module to build a compact regular expression from a list of strings using a Trie.
 """
 
+import re
+
 class TrieNode:
     """Represents a single node in the Trie."""
     def __init__(self):
@@ -41,13 +43,14 @@ class Trie:
             return ''
         parts = []
         for char, child in node.children.items():
+            escaped_char = re.escape(char)
             suffix = self._build_regex(child)
             if child.is_end and suffix:
-                parts.append(f"(?:{char}{suffix})")
+                parts.append(f"{escaped_char}(?:{suffix})?")
             elif child.is_end:
-                parts.append(f"{char}")
+                parts.append(f"{escaped_char}")
             else:
-                parts.append(f"{char}{suffix}")
+                parts.append(f"{escaped_char}{suffix}")
         return parts[0] if len(parts) == 1 else f"(?:{'|'.join(parts)})"
 
     def to_regex(self) -> str:

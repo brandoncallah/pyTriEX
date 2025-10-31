@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="pyTriEX",
+    name="TrieFastRegex",
     version="0.1.0",
     author="Brandon Callahan",
     author_email="brandoncallah@gmail.com",

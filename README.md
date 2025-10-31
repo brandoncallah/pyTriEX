@@ -1,11 +1,11 @@
-# pyTriEX
+# TrieFastRegex
 
 A Python library for building compact regular expressions from lists of strings using Trie data structure.
 
 ## Installation
 
 ```bash
-pip install pyTriEX
+pip install TrieFastRegex
 ```
 
 ## Usage

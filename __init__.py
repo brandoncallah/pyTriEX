@@ -1,4 +1,4 @@
-"""pyTriEX: A compact regular expression builder from string lists using Trie data structure."""
+"""TrieFastRegex: A compact regular expression builder from string lists using Trie data structure."""
 
 from .pyTriEX import build_regex_from_list, Trie, TrieNode
 
