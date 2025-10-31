@@ -2,5 +2,5 @@
 
 from .pyTriEX import build_regex_from_list, Trie, TrieNode
 
-__version__ = "0.1.1"
+__version__ = "0.1.1a"
 __all__ = ["build_regex_from_list", "Trie", "TrieNode"]

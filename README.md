@@ -16,7 +16,7 @@ from pyTriEX import build_regex_from_list
 # Build regex from a list of strings
 strings = ["cat", "car", "card", "care", "careful"]
 regex = build_regex_from_list(strings)
-print(regex)  # ^(?:ca(?:r(?:d|e(?:ful)?)|t))$
+print(regex)  # ^ca(?:t|r(?:(?:d|e(?:ful)?))?)$
 
 # Use the regex
 import re
